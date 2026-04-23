@@ -761,11 +761,11 @@ setInterval(() => {
     pet.happy  = Math.min(100, pet.happy  + dt * 0.1);
   } else {
     // Drain stats over time
-    pet.hunger = Math.max(0, pet.hunger - dt * 0.5);
-    pet.thirst = Math.max(0, pet.thirst - dt * 0.8);
-    pet.happy  = Math.max(0, pet.happy  - dt * 0.4);
-    if (pet.hunger < 20 || pet.thirst < 20) pet.health = Math.max(0, pet.health - dt * 0.3);
-    if (pet.happy < 20)                     pet.health = Math.max(0, pet.health - dt * 0.1);
+    pet.hunger = Math.max(0, pet.hunger - dt * 0.08);
+    pet.thirst = Math.max(0, pet.thirst - dt * 0.10);
+    pet.happy  = Math.max(0, pet.happy  - dt * 0.06);
+    if (pet.hunger < 20 || pet.thirst < 20) pet.health = Math.max(0, pet.health - dt * 0.04);
+    if (pet.happy < 20)                     pet.health = Math.max(0, pet.health - dt * 0.02);
   }
 
   pet.ageMinutes += dt / 60;
